@@ -1,0 +1,45 @@
+---
+const steps = [
+  {
+    number: "1",
+    title: "Choose Your Template",
+    description: "Select from a wide range of industry-specific templates.",
+    color: "#0077B6",
+  },
+  {
+    number: "2",
+    title: "Customize Your Scene",
+    description:
+      "Easily adjust colors, textures, and objects with intuitive controls.",
+    color: "#5C0A98",
+  },
+  {
+    number: "3",
+    title: "Export & Share",
+    description:
+      "Get your high-quality CG content ready for any platform in minutes.",
+    color: "#FF006E",
+  },
+];
+---
+
+<section
+  class="py-20 bg-[radial-gradient(#000000,transparent_1px)] [background-size:16px_16px]"
+>
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-12 text-center">How It Works</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        steps.map((step) => (
+          <div class="backdrop-blur-md bg-white/5 rounded-2xl p-6 flex flex-col items-center text-center hover:bg-white/10 transition-colors duration-300">
+            <div class={`text-4xl font-bold mb-4 text-[${step.color}]`}>
+              {step.number}
+            </div>
+            <h3 class="text-2xl font-semibold mb-4">{step.title}</h3>
+            <p class="text-gray-300">{step.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+---
+import { Music, ShoppingBag, Shirt, Users } from "lucide-react";
+
+const features = [
+  {
+    icon: Music,
+    title: "For Musicians",
+    description:
+      "Craft immersive music videos and album art that resonate with your sound.",
+    color: "text-[#0077B6]",
+  },
+  {
+    icon: ShoppingBag,
+    title: "For Brands",
+    description:
+      "Showcase products in stunning 3D environments that captivate your audience.",
+    color: "text-[#5C0A98]",
+  },
+  {
+    icon: Shirt,
+    title: "For Designers",
+    description:
+      "Bring your fashion concepts to life with realistic 3D models and textures.",
+    color: "text-[#FF006E]",
+  },
+  {
+    icon: Users,
+    title: "For Influencers",
+    description:
+      "Stand out with unique, eye-catching content that stops the scroll.",
+    color: "text-[#FFD100]",
+  },
+];
+---
+
+<section
+  class="py-20 bg-[#2C2C2C] bg-[radial-gradient(#1C1C1C,transparent_1px)] [background-size:16px_16px]"
+>
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-12 text-center">Create Like a Pro</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {
+        features.map((feature) => (
+          <div class="backdrop-blur-md bg-white/5 rounded-2xl p-6 flex flex-col items-center text-center hover:bg-white/10 transition-colors duration-300">
+            <feature.icon className={`h-12 w-12 mb-4 ${feature.color}`} />
+            <h3 class="text-2xl font-semibold mb-4">{feature.title}</h3>
+            <p class="text-gray-300">{feature.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

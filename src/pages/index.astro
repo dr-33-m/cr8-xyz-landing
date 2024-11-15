@@ -1,16 +1,20 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Hero from "../components/Hero";
+import Features from "../components/Features.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import CTA from "../components/CTA";
+import Footer from "../components/Footer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Cr8-xyz - Create Stunning CG Content">
+  <div class="min-h-screen bg-[#1C1C1C] text-white overflow-hidden">
+    <Navigation />
+    <Hero client:load />
+    <Features />
+    <HowItWorks />
+    <CTA client:load />
+    <Footer />
+  </div>
+</Layout>

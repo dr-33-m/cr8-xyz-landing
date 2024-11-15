@@ -1,0 +1,50 @@
+---
+import { Box } from "lucide-react";
+import { Button } from "@/components/ui/button";
+---
+
+<nav class="absolute top-0 left-0 right-0 z-10">
+  <div class="container mx-auto px-4 py-4">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center">
+        <img
+          src="/images/cr8.png"
+          alt=""
+          class="h-10 w-10 transition-transform hover:translate-y-[-2px] rounded-sm"
+          style="box-shadow: 0 1px 4px #FFD100;"
+        />
+
+        <span class="ml-2 text-xl font-semibold">Cr8-xyz</span>
+      </div>
+      <div class="hidden md:flex space-x-4">
+        <Button
+          variant="ghost"
+          className="text-white hover:text-[#0077B6] hover:bg-white/10"
+          >For Musicians</Button
+        >
+        <Button
+          variant="ghost"
+          className="text-white hover:text-[#5C0A98] hover:bg-white/10"
+          >For Brands</Button
+        >
+        <Button
+          variant="ghost"
+          className="text-white hover:text-[#FF006E] hover:bg-white/10"
+          >For Designers</Button
+        >
+        <Button
+          variant="ghost"
+          className="text-white hover:text-[#FFD100] hover:bg-white/10"
+          >For Influencers</Button
+        >
+      </div>
+      {
+        false && (
+          <Button className="bg-[#FFD100] text-black hover:bg-[#FFD100]/90">
+            Start Creating
+          </Button>
+        )
+      }
+    </div>
+  </div>
+</nav>
