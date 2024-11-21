@@ -63,7 +63,7 @@ const EarlyAccessForm = () => {
               disabled={serverResponse === 200}
             >
               {serverResponse === 200 ? (
-                <span>Thanks for joining</span>
+                <span>Your access link will be sent soon!</span>
               ) : serverResponse === 400 ? (
                 <span>Please enter a valid email</span>
               ) : (
