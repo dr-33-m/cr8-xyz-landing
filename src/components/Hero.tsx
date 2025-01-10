@@ -10,7 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ChevronRight, Play, ChevronLeft } from "lucide-react";
+import { ChevronRight, Play, ChevronLeft, ArrowRight } from "lucide-react";
 
 const examples = [
   {
@@ -70,18 +70,18 @@ export default function Hero() {
       <div className="container mx-auto px-4 z-10">
         <div className="text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            The Freedom to Dream
+            Cut Content Creation Costs By 70%.
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            Cr8 high-quality 3D visuals. As easy as using a filter.
+            Create content with unlimited possibilities using cr8-xyz.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-            {false && (
-              <Button className="bg-[#FFD100] text-black hover:bg-[#FFD100]/90 px-8 py-6 text-lg">
+            <a href="https://cr8-studio.streetcrisis.online/" target="_blank">
+              <Button className="bg-[#FFD100] text-black hover:bg-[#FFD100]/90 px-6 py-6 text-lg">
                 Start Creating
-                <ChevronRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="h-5 w-5" />
               </Button>
-            )}
+            </a>
             <Dialog>
               {false && (
                 <DialogTrigger asChild>
@@ -89,8 +89,8 @@ export default function Hero() {
                     variant="outline"
                     className="text-[#FFD100] border-[#FFD100] hover:bg-white/10 px-8 py-6 text-lg"
                   >
-                    See Examples
-                    <Play className="ml-2 h-5 w-5" />
+                    Made In Cr8-xyz
+                    <Play className="h-5 w-5" />
                   </Button>
                 </DialogTrigger>
               )}

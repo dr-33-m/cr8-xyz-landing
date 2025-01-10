@@ -1,6 +1,6 @@
 ---
-import { Box } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 ---
 
 <nav class="absolute top-0 left-0 right-0 z-10">
@@ -20,31 +20,28 @@ import { Button } from "@/components/ui/button";
         <Button
           variant="ghost"
           className="text-white hover:text-[#0077B6] hover:bg-white/10"
-          >For Musicians</Button
         >
-        <Button
-          variant="ghost"
-          className="text-white hover:text-[#5C0A98] hover:bg-white/10"
-          >For Brands</Button
-        >
-        <Button
-          variant="ghost"
-          className="text-white hover:text-[#FF006E] hover:bg-white/10"
-          >For Designers</Button
-        >
+          For Concept Validation
+        </Button>
         <Button
           variant="ghost"
           className="text-white hover:text-[#FFD100] hover:bg-white/10"
-          >For Influencers</Button
         >
+          For Marketing
+        </Button>
+        <Button
+          variant="ghost"
+          className=" text-white hover:text-[#5C0A98] hover:bg-white/10"
+        >
+          For Social Media
+        </Button>
       </div>
-      {
-        false && (
-          <Button className="bg-[#FFD100] text-black hover:bg-[#FFD100]/90">
-            Start Creating
-          </Button>
-        )
-      }
+      <a href="https://cr8-studio.streetcrisis.online/" target="_blank">
+        <Button className="bg-[#FFD100] text-black hover:bg-[#FFD100]/90">
+          Start Creating
+          <ArrowRight className="h-5 w-5" />
+        </Button>
+      </a>
     </div>
   </div>
 </nav>

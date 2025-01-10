@@ -1,34 +1,27 @@
 ---
-import { Music, ShoppingBag, Shirt, Users } from "lucide-react";
+import { CheckCircle, Megaphone, Users } from "lucide-react";
 
 const features = [
   {
-    icon: Music,
-    title: "For Musicians",
+    icon: CheckCircle,
+    title: "For Concept Validation",
     description:
-      "Craft immersive music videos and album art that resonate with your sound.",
+      "Test designs in the market before production. No more expensive samples.",
     color: "text-[#0077B6]",
   },
   {
-    icon: ShoppingBag,
-    title: "For Brands",
+    icon: Megaphone,
+    title: "For Marketing",
     description:
-      "Showcase products in stunning 3D environments that captivate your audience.",
-    color: "text-[#5C0A98]",
-  },
-  {
-    icon: Shirt,
-    title: "For Designers",
-    description:
-      "Bring your fashion concepts to life with realistic 3D models and textures.",
-    color: "text-[#FF006E]",
+      "Unlock targeted, infinite creative potential for your products and boost engagement effortlessly.",
+    color: "text-[#FFD100]",
   },
   {
     icon: Users,
-    title: "For Influencers",
+    title: "For Social Media",
     description:
-      "Stand out with unique, eye-catching content that stops the scroll.",
-    color: "text-[#FFD100]",
+      "Create scroll-stopping visuals that break through short attention spans.",
+    color: "text-[#5C0A98]",
   },
 ];
 ---
@@ -38,7 +31,7 @@ const features = [
 >
   <div class="container mx-auto px-4">
     <h2 class="text-4xl font-bold mb-12 text-center">Create Like a Pro</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
         features.map((feature) => (
           <div class="backdrop-blur-md bg-white/5 rounded-2xl p-6 flex flex-col items-center text-center hover:bg-white/10 transition-colors duration-300">
