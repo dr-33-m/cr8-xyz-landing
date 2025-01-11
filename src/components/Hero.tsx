@@ -73,7 +73,7 @@ export default function Hero() {
             Cut Content Creation Costs By 70%.
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            Create content with unlimited possibilities using cr8-xyz.
+            Create content with unlimited possibilities using 3D.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a href="https://cr8-studio.streetcrisis.online/" target="_blank">
