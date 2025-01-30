@@ -76,7 +76,7 @@ export default function Hero() {
             Create content with unlimited possibilities using 3D.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="https://cr8-studio.streetcrisis.online/" target="_blank">
+            <a href="https://studio.cr8-xyz.online/" target="_blank">
               <Button className="bg-[#FFD100] text-black hover:bg-[#FFD100]/90 px-6 py-6 text-lg">
                 Start Creating
                 <ArrowRight className="h-5 w-5" />

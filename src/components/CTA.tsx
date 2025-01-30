@@ -14,7 +14,7 @@ const EarlyAccessForm = () => {
             Join forward-thinking brands already saving thousands in 3D content
             creation.
           </p>
-          <a href="https://cr8-studio.streetcrisis.online/" target="_blank">
+          <a href="https://studio.cr8-xyz.online/" target="_blank">
             <Button
               type="submit"
               className="bg-[#FFD100] text-black hover:bg-[#FFD100]/90 px-6 py-6 text-lg"
