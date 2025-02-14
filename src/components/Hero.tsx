@@ -77,26 +77,41 @@ export default function Hero() {
                         controlsList="nodownload"
                         onContextMenu={(e) => e.preventDefault()}
                       />
-                      <Button
-                        variant="ghost"
-                        className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white hover:bg-white/10 transition-colors"
-                        onClick={prevVideo}
-                      >
-                        <ChevronLeft className="h-6 w-6 text-[#FFD100]" />
-                      </Button>
-                      <Button
-                        variant="ghost"
-                        className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white hover:bg-white/10 transition-colors"
-                        onClick={nextVideo}
-                      >
-                        <ChevronRight className="h-6 w-6 text-[#FFD100]" />
-                      </Button>
+                      {currentVideoIndex > 0 && (
+                        <Button
+                          variant="ghost"
+                          className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white hover:bg-white/10 transition-colors"
+                          onClick={prevVideo}
+                        >
+                          <ChevronLeft className="h-6 w-6 text-[#FFD100]" />
+                        </Button>
+                      )}
+                      {currentVideoIndex < videos.length - 1 && (
+                        <Button
+                          variant="ghost"
+                          className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white hover:bg-white/10 transition-colors"
+                          onClick={nextVideo}
+                        >
+                          <ChevronRight className="h-6 w-6 text-[#FFD100]" />
+                        </Button>
+                      )}
                     </div>
                   ) : (
                     <p className="text-center text-gray-300">
-                      No examples available for this category.
+                      No examples available.
                     </p>
                   )}
+                </div>
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                  {videos.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-colors ${
+                        index === currentVideoIndex ? "bg-white" : "bg-white/50"
+                      }`}
+                      onClick={() => setCurrentVideoIndex(index)}
+                    />
+                  ))}
                 </div>
               </DialogContent>
             </Dialog>
