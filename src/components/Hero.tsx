@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="container mx-auto px-4 z-10">
         <div className="text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Cut Content Creation Costs By 70%.
+            Product visuals as easy as filters.
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
             Create content with unlimited possibilities using 3D.
