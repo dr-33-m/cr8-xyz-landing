@@ -40,11 +40,12 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(#000000,transparent_1px)] [background-size:16px_16px] z-0 "></div>
       <div className="container mx-auto px-4 z-10">
         <div className="text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Product visuals as easy as filters.
+          <h1 className="text-3xl md:text-6xl font-bold mb-6">
+            Brand Stories That Captivate. <br /> Product Visuals That Sell.
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            Create content with unlimited possibilities using 3D.
+            Transform your brand narrative into an immersive experience that
+            works.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Dialog>
