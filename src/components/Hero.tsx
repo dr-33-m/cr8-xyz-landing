@@ -21,6 +21,14 @@ const videos = [
     videoUrl:
       "https://storage.streetcrisis.online/cr8-xyz-demo-visuals/Lelive%20Demo.mov",
   },
+  {
+    videoUrl:
+      "https://storage.streetcrisis.online/cr8-xyz-demo-visuals/FINAL%20VIDEO.mp4",
+  },
+  {
+    videoUrl:
+      "https://storage.streetcrisis.online/cr8-xyz-demo-visuals/BEAMER.mp4",
+  },
 ];
 
 export default function Hero() {
