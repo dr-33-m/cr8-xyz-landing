@@ -29,6 +29,10 @@ const videos = [
     videoUrl:
       "https://storage.streetcrisis.online/cr8-xyz-demo-visuals/BEAMER.mp4",
   },
+  {
+    videoUrl:
+      "https://storage.streetcrisis.online/cr8-xyz-demo-visuals/bhathu.mp4",
+  },
 ];
 
 export default function Hero() {
