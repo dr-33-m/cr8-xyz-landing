@@ -8,18 +8,17 @@ const EarlyAccessForm = () => {
       <div className="container mx-auto px-4">
         <div className="backdrop-blur-md bg-white/5 rounded-2xl p-8 md:p-12 flex flex-col items-center justify-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-            Ready to Transform Your Content Creation?
+            Let’s Create Together
           </h2>
           <p className="text-xl mb-8 text-center text-gray-300">
-            Join forward-thinking brands already saving thousands in 3D content
-            creation.
+            Experience the magic of open 3D innovation.
           </p>
-          <a href="https://studio.cr8-xyz.online/" target="_blank">
+          <a href="/docs">
             <Button
               type="submit"
-              className="bg-[#FFD100] text-black hover:bg-[#FFD100]/90 px-6 py-6 text-lg"
+              className="bg-[#0077B6] text-white px-6 py-6 text-lg transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#0077B6]"
             >
-              <span>Start Creating</span>
+              <span>Set It Up</span>
               <ArrowRight className="h-5 w-5" />
             </Button>
           </a>

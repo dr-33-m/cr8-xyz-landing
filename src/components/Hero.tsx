@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -10,127 +9,61 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ChevronRight, Play, ChevronLeft, ArrowRight } from "lucide-react";
+import { Play, ArrowRight } from "lucide-react";
 
-const videos = [
-  {
-    videoUrl:
-      "https://storage.streetcrisis.online/cr8-xyz-demo-visuals/lebox.mov",
-  },
-  {
-    videoUrl:
-      "https://storage.streetcrisis.online/cr8-xyz-demo-visuals/Lelive%20Demo.mov",
-  },
-  {
-    videoUrl:
-      "https://storage.streetcrisis.online/cr8-xyz-demo-visuals/FINAL%20VIDEO.mp4",
-  },
-  {
-    videoUrl:
-      "https://storage.streetcrisis.online/cr8-xyz-demo-visuals/BEAMER.mp4",
-  },
-  {
-    videoUrl:
-      "https://storage.streetcrisis.online/cr8-xyz-demo-visuals/bhathu.mp4",
-  },
-];
+const demoVideoUrl =
+  "https://storage.streetcrisis.online/cr8-xyz-demo-visuals/cr8-xyz-demo.mp4";
 
 export default function Hero() {
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const nextVideo = () => {
-    setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
-  };
-
-  const prevVideo = () => {
-    setCurrentVideoIndex(
-      (prevIndex) => (prevIndex - 1 + videos.length) % videos.length
-    );
-  };
-
   return (
     <section className="relative h-screen flex items-center justify-center">
       <div className="absolute inset-0 bg-[radial-gradient(#000000,transparent_1px)] [background-size:16px_16px] z-0 "></div>
       <div className="container mx-auto px-4 z-10">
         <div className="text-center">
           <h1 className="text-3xl md:text-6xl font-bold mb-6">
-            Brand Stories That Captivate. <br /> Product Visuals That Sell.
+            Everyone Can Create.
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            Transform your brand narrative into an immersive experience that
-            works.
+            Cr8-xyz is an open-source platform that makes 3D content creation
+            simple and accessible to everyone with a story to tell.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Dialog>
               <DialogTrigger asChild>
                 <Button
                   variant="outline"
-                  className="text-[#FFD100] border-[#FFD100]  px-8 py-6 text-lg bg-transparent hover:bg-[#FFD100] hover:text-[#000000] transition-all duration-300 "
+                  className="text-white px-8 py-6 text-lg bg-[#0077B6]/20 hover:bg-[#0077B6]/30 hover:text-white transition-all duration-300 border border-transparent hover:-translate-y-[2px] [box-shadow:0_1px_4px_#0077B6]"
                 >
-                  Made In Cr8-xyz
+                  How Cr8-xyz works
                   <Play className="h-5 w-5" />
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[800px] bg-gradient-to-br from-[#2C2C2C] to-[#1C1C1C] border-white/10 backdrop-blur-md">
                 <DialogHeader>
                   <DialogTitle className="text-2xl font-bold mb-2 text-[#0077B6]">
-                    Made with Cr8-xyz
+                    How Cr8-xyz Works
                   </DialogTitle>
-                  <DialogDescription className="text-[#FFD100]">
-                    See how brands are using Cr8-xyz to create stunning visuals
+                  <DialogDescription className="text-[#0077B6]">
+                    Watch this demo to see what Cr8-xyz can currently do
                   </DialogDescription>
                 </DialogHeader>
 
                 <div className="mt-4">
-                  {videos.length > 0 ? (
-                    <div className="relative rounded-lg overflow-hidden transition-all duration-300">
-                      <video
-                        controls
-                        className="w-full h-[400px] object-cover"
-                        src={videos[currentVideoIndex].videoUrl}
-                        controlsList="nodownload"
-                        onContextMenu={(e) => e.preventDefault()}
-                      />
-                      {currentVideoIndex > 0 && (
-                        <Button
-                          variant="ghost"
-                          className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white hover:bg-white/10 transition-colors"
-                          onClick={prevVideo}
-                        >
-                          <ChevronLeft className="h-6 w-6 text-[#FFD100]" />
-                        </Button>
-                      )}
-                      {currentVideoIndex < videos.length - 1 && (
-                        <Button
-                          variant="ghost"
-                          className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white hover:bg-white/10 transition-colors"
-                          onClick={nextVideo}
-                        >
-                          <ChevronRight className="h-6 w-6 text-[#FFD100]" />
-                        </Button>
-                      )}
-                    </div>
-                  ) : (
-                    <p className="text-center text-gray-300">
-                      No examples available.
-                    </p>
-                  )}
-                </div>
-                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                  {videos.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        index === currentVideoIndex ? "bg-white" : "bg-white/50"
-                      }`}
-                      onClick={() => setCurrentVideoIndex(index)}
+                  <div className="rounded-lg overflow-hidden">
+                    <video
+                      controls
+                      className="w-full h-[400px] object-cover"
+                      src={demoVideoUrl}
+                      controlsList="nodownload"
+                      onContextMenu={(e) => e.preventDefault()}
                     />
-                  ))}
+                  </div>
                 </div>
               </DialogContent>
             </Dialog>
-            <a href="https://studio.cr8-xyz.online/" target="_blank">
-              <Button className="bg-[#FFD100] text-black hover:bg-[#FFD100]/90 px-6 py-6 text-lg">
-                Start Creating
+            <a href="/docs">
+              <Button className="bg-[#0077B6]/20 text-white hover:bg-[#0077B6]/30 px-6 py-6 text-lg border border-transparent transition-all duration-300 hover:-translate-y-[2px] [box-shadow:0_1px_4px_#0077B6]">
+                Set It Up
                 <ArrowRight className="h-5 w-5" />
               </Button>
             </a>

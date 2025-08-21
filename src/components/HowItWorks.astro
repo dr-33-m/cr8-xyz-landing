@@ -1,45 +1,19 @@
 ---
-const steps = [
-  {
-    number: "1",
-    title: "Choose Your Template",
-    description:
-      "Choose from a diverse selection of templates inspired by your custom moodboards.",
-    color: "#0077B6",
-  },
-  {
-    number: "2",
-    title: "Customize Your Scene",
-    description:
-      "Effortlessly customize lights, environments, and props to match your branding with intuitive controls.",
-    color: "#FF006E",
-  },
-  {
-    number: "3",
-    title: "Export & Share",
-    description: "Download content ready for your website, ads, and socials.",
-    color: "#FFD100",
-  },
-];
+import { Goal } from "lucide-react";
+
+const mission = {
+  text: "To open up the world of 3D to everyone, and build a community where content creators, 3D Artists and Developers work together to create the impossible.",
+};
 ---
 
 <section
   class="py-20 bg-[radial-gradient(#000000,transparent_1px)] [background-size:16px_16px]"
 >
   <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold mb-12 text-center">How It Works</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {
-        steps.map((step) => (
-          <div class="backdrop-blur-md bg-white/5 rounded-2xl p-6 flex flex-col items-center text-center hover:bg-white/10 transition-colors duration-300">
-            <div class={`text-4xl font-bold mb-4 text-[${step.color}]`}>
-              {step.number}
-            </div>
-            <h3 class="text-2xl font-semibold mb-4">{step.title}</h3>
-            <p class="text-gray-300">{step.description}</p>
-          </div>
-        ))
-      }
+    <h2 class="text-4xl font-bold mb-12 text-center">Our Mission</h2>
+    <div class="backdrop-blur-md bg-white/5 rounded-2xl p-12 text-center">
+      <Goal className="h-12 w-12 mb-6 text-[#0077B6] mx-auto" />
+      <p class="text-2xl text-gray-300">{mission.text}</p>
     </div>
   </div>
 </section>

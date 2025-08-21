@@ -1,0 +1,102 @@
+---
+import Layout from "./Layout.astro";
+import Navigation from "../components/Navigation.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <div class="min-h-screen bg-[#1C1C1C] text-white relative">
+    <div
+      class="absolute inset-0 bg-[radial-gradient(#000000,transparent_1px)] [background-size:16px_16px] z-0"
+    >
+    </div>
+    <Navigation showButton={false} />
+    <div class="container mx-auto px-4 py-20 relative z-10">
+      <div class="max-w-4xl mx-auto prose prose-invert prose-lg">
+        <slot />
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  /* Custom prose styles for documentation */
+  .prose {
+    max-width: none;
+  }
+
+  .prose h1 {
+    @apply text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .prose h2 {
+    @apply text-3xl font-bold mt-12 mb-6 text-blue-400 border-b border-gray-700 pb-2;
+  }
+
+  .prose h3 {
+    @apply text-xl font-semibold mt-8 mb-4 text-yellow-400;
+  }
+
+  .prose h4 {
+    @apply text-lg font-semibold mt-6 mb-3 text-white;
+  }
+
+  .prose p {
+    @apply text-gray-300 leading-relaxed mb-4;
+  }
+
+  .prose code:not(pre code) {
+    @apply bg-gray-800 px-2 py-1 rounded text-green-400 text-sm;
+  }
+
+  .prose pre {
+    @apply bg-black border border-gray-700 rounded-lg p-4 overflow-x-auto mb-6;
+  }
+
+  .prose pre code {
+    @apply text-green-400 text-sm;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-blue-500 bg-blue-900/20 pl-4 py-3 rounded-r-lg my-6;
+  }
+
+  .prose blockquote p {
+    @apply text-blue-200 mb-0;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply text-gray-300 mb-4;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+
+  .prose a {
+    @apply text-blue-400 hover:text-blue-300 underline transition-colors;
+  }
+
+  .prose strong {
+    @apply text-white font-semibold;
+  }
+
+  .prose hr {
+    @apply border-gray-700 my-12;
+  }
+
+  /* Custom styling for specific elements */
+  .prose li > p {
+    @apply mb-1;
+  }
+
+  .prose li > code {
+    @apply bg-gray-700;
+  }
+</style>
