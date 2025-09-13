@@ -21,11 +21,10 @@ export default function Hero() {
       <div className="container mx-auto px-4 z-10">
         <div className="text-center">
           <h1 className="text-3xl md:text-6xl font-bold mb-6">
-            Everyone Can Create.
+            Cinematic visuals for every creator.
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            Cr8-xyz is an open-source platform that makes 3D content creation
-            simple and accessible to everyone with a story to tell.
+            Art direct your next video or campaign effortlessly.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Dialog>

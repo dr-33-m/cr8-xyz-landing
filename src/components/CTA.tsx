@@ -8,10 +8,10 @@ const EarlyAccessForm = () => {
       <div className="container mx-auto px-4">
         <div className="backdrop-blur-md bg-white/5 rounded-2xl p-8 md:p-12 flex flex-col items-center justify-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-            Let’s Create Together
+            Create Your First Campaign
           </h2>
           <p className="text-xl mb-8 text-center text-gray-300">
-            Experience the magic of open 3D innovation.
+            Focus on your ideas. We’ll handle the rest.
           </p>
           <a href="/docs">
             <Button
