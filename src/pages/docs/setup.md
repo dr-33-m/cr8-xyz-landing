@@ -106,7 +106,7 @@ Cr8-xyz requires a custom Blender build with WebRTC viewport streaming support.
 ### 1. Clone the Custom Blender Repository
 
 ```bash
-git clone https://code.streetcrisis.online/Cr8-xyz/blender.git
+git clone https://code.cr8-xyz.art/Cr8-xyz/blender.git
 cd blender
 git checkout webrtc-viewport-streaming
 ```
@@ -143,7 +143,7 @@ The Cr8_engine is a FastAPI WebSocket server that handles communication between 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://code.streetcrisis.online/Cr8-xyz/cr8-app.git
+git clone https://code.cr8-xyz.art/Cr8-xyz/cr8-app.git
 cd cr8-app/backend/cr8_engine
 ```
 
@@ -301,7 +301,7 @@ export CR8_USERNAME=your_username
 
 For additional support:
 
-- Check the [GitHub Issues](https://code.streetcrisis.online/Cr8-xyz/cr8-app/issues)
+- Check the [GitHub Issues](https://code.cr8-xyz.art/Cr8-xyz/cr8-app/issues)
 - Review component-specific READMEs in the repository
 - Verify environment variable configuration
 
