@@ -1,17 +1,22 @@
 ---
-import "@/styles/globals.css";
 import Layout from "../layouts/Layout.astro";
+import TopBar from "@/components/TopBar";
+import TimelineNav from "@/components/TimelineNav";
 import HeroSection from "@/components/sections/HeroSection.astro";
-import InspirationSection from "@/components/sections/InspirationSection.astro";
-import MissionSection from "@/components/sections/MissionSection.astro";
-import CallToActionSection from "@/components/sections/CallToActionSection.astro";
+import WalkthroughSection from "@/components/sections/WalkthroughSection";
+import WhySection from "@/components/sections/WhySection.astro";
+import GetSection from "@/components/sections/GetSection";
+import Footer from "@/components/sections/Footer.astro";
 ---
 
-<Layout title="Storytelling through fashion">
-  <main class="min-h-screen">
+<Layout title="Cr8-xyz | CGI content creation made simpler">
+  <TopBar client:load />
+  <main class="min-h-screen overflow-hidden">
     <HeroSection />
-    <InspirationSection />
-    <MissionSection />
-    <CallToActionSection />
+    <WalkthroughSection client:load />
+    <WhySection />
+    <GetSection client:load />
   </main>
+  <Footer />
+  <TimelineNav client:load />
 </Layout>

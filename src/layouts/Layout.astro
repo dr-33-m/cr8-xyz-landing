@@ -1,13 +1,18 @@
 ---
 import "@/styles/globals.css";
 import Analytics from "@vercel/analytics/astro";
+
 const ogImageUrl = new URL("/open-graph-v2.png", Astro.url);
 
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = "Cr8-xyz is an open-source CGI project built on Blender for creatives exploring 3D without climbing the mountain alone.",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -16,18 +21,36 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{title}</title>
-    <meta property="og:description" content="Storytelling through fashion" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
-    <meta property="og:description" content="Storytelling through fashion" />
-    <meta property="og:image" content={ogImageUrl} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImageUrl} />
+
+    <script is:inline>
+      (() => {
+        try {
+          const root = document.documentElement;
+          const storedTheme = localStorage.getItem("theme");
+          const theme = storedTheme || "system";
+          const resolvedTheme = theme === "system"
+            ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+            : theme;
+
+          root.classList.remove("light", "dark");
+          root.classList.add(resolvedTheme);
+          root.style.colorScheme = resolvedTheme;
+        } catch (_) {}
+      })();
+    </script>
   </head>
   <body>
     <slot />

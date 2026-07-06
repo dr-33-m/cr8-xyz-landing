@@ -4,6 +4,11 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)", "Albert Sans", "Space Grotesk", "sans-serif"],
+        serif: ["var(--font-serif)", "Space Grotesk", "Albert Sans", "sans-serif"],
+        mono: ["var(--font-mono)", "Space Grotesk", "Albert Sans", "sans-serif"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

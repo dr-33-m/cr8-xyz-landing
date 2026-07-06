@@ -1,73 +1,77 @@
 ---
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { Computer, MonitorPlay } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+
+const LOCAL_URL = "https://github.com/dr-33-m/cr8-app/blob/main/README.md";
+const CLOUD_URL = "https://studio.cr8-xyz.art/";
 ---
 
 <section
-  class="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden"
+  id="hero"
+  class="relative flex min-h-[85vh] items-center overflow-hidden px-6 pb-28 pt-36 sm:pt-40"
 >
+  <div class="vp-floor" aria-hidden="true"></div>
   <div
-    class="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background to-secondary/20"
+    class="yc-glow absolute bottom-[4%] left-1/2 z-0 h-[640px] w-[640px] -translate-x-1/2 rounded-full"
+    aria-hidden="true"
   >
   </div>
-  <div class="absolute inset-0 -z-10">
-    <div
-      class="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full opacity-20"
-      style="background: radial-gradient(circle, var(--primary) 0%, transparent 70%);"
-    >
-    </div>
-    <div
-      class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full opacity-20"
-      style="background: radial-gradient(circle, var(--primary) 0%, transparent 70%);"
-    >
-    </div>
-  </div>
   <div
-    class="absolute inset-0 -z-10"
-    style="background-image: radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0); background-size: 40px 40px;"
+    class="yc-glow absolute right-[6%] top-[2%] z-0 h-[420px] w-[420px] rounded-full opacity-[0.14]"
+    aria-hidden="true"
   >
   </div>
 
-  <div class="max-w-5xl mx-auto text-center space-y-12 animate-fade-in">
-    <div class="space-y-6">
-      <div
-        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-card/50 backdrop-blur-sm mb-4"
-      >
-        <span class="relative flex h-2 w-2">
-          <span
-            class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
-            style="background-color: var(--primary);"></span>
-          <span
-            class="relative inline-flex rounded-full h-2 w-2"
-            style="background-color: var(--primary);"></span>
+  <div
+    class="yc-fade-in relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-7 text-center"
+  >
+    <span class="yc-hover-card" tabindex="0" aria-describedby="open-source-note">
+      <Badge variant="live" className="cursor-help">open source</Badge>
+      <span id="open-source-note" role="tooltip" class="yc-hover-card__panel">
+        Cr8-xyz is an open-source platform built on top of Blender, the 3D creative suite loved by many.
+      </span>
+    </span>
+
+    <h1
+      class="m-0 text-[clamp(42px,6.4vw,78px)] font-medium leading-[1.06] tracking-[var(--tracking-tight)] text-foreground"
+    >
+      <span class="yc-hover-card yc-hover-card--inline" tabindex="0" aria-describedby="cgi-note">
+        <span class="yc-blender-select">CGI</span>
+        <span id="cgi-note" role="tooltip" class="yc-hover-card__panel yc-hover-card__panel--wide">
+          CGI means computer-generated imagery: visuals made with 3D tools instead of a camera.
         </span>
-        <span class="text-sm md:text-base font-medium"
-          >Storytelling through fashion</span
-        >
-      </div>
+      </span> content creation<br />made simpler.
+    </h1>
 
-      <h1
-        class="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1]"
-      >
-        Let's tell stories that matter to your community.
-      </h1>
-      <p
-        class="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
-      >
-        We help fashion brands create stories that care, connect, and inspire,
-        the way great films do.
-      </p>
-    </div>
+    <p
+      class="m-0 max-w-2xl text-[clamp(18px,2.2vw,24px)] leading-normal text-muted-foreground"
+    >
+      Instead of starting from an empty scene, you can build from pipelines, presets, and automations that help you create without starting from zero.
+    </p>
 
-    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <a href="https://cal.com/thamsanqa.dev/cr8-xyz-set-up" target="_blank">
-        <Button size="lg" className="text-base px-8 py-6 rounded-lg group">
-          Lets Collaborate
-          <ArrowRight
-            className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
-          />
-        </Button>
+    <div class="mt-1 flex flex-wrap justify-center gap-3">
+      <a
+        href={LOCAL_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-input bg-background px-8 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+      >
+        <Computer className="size-4" />
+        Set up locally
+      </a>
+      <a
+        href={CLOUD_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-[var(--yc-yellow-strong)] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+      >
+        <MonitorPlay className="size-4" />
+        Open in browser
       </a>
     </div>
+
+    <p class="mt-1 font-mono text-xs tracking-[0.06em] text-muted-foreground">
+      Run it locally, build on it, or join the cloud version and help support the mission.
+    </p>
   </div>
 </section>
